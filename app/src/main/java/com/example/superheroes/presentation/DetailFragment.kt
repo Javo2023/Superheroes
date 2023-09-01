@@ -1,5 +1,6 @@
 package com.example.superheroes.presentation
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -79,17 +80,16 @@ class DetailFragment : Fragment() {
                 }
             }
     }
+    @SuppressLint("StringFormatInvalid")
     private fun sendEmail(nombre: String) {
-        val receiver = "comicconchile@hotmail.com"
+        val receiver = getString(R.string.receiver)
         val intent = Intent(Intent.ACTION_SEND,Uri.parse(receiver))
         intent.type = "plain/text"
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Votacion  $nombre")
-        intent.putExtra(Intent.EXTRA_TEXT, "Hola\n" +
-                "Quiero que el siguiente super héroes $nombre aparezca, en la nueva edición de\n" +
-                "biografías animadas.\n" +
-                "Número contacto: _________\n" +
-                "Gracias."
-        )
+        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(receiver))
+        intent.putExtra(Intent.EXTRA_SUBJECT,getString(R.string.subject,nombre))
+        intent.putExtra(Intent.EXTRA_TEXT,getString(R.string.body_msn, nombre))
+
+
         startActivity(Intent.createChooser(intent,"Votación"))
 
 

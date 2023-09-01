@@ -5,4 +5,9 @@
     <string name="elige_tu_superh_roe_favorito">Elige tu Superhéroe Favorito</string>
     <string name="cuenta_con_traducci_n_al_espa_ol">Cuenta con traducción al español.</string>
     <string name="sin_traducci_n">Sin traducción.</string>
+    <string name="receiver">comicconchile@hotmail.com</string>
+    <string name="subject"> "Votacion  %s"</string>
+
+
+    <string name="body_msn">"Hola\nQuiero que el siguiente super héroes %s aparezca, en la nueva edición de\nbiografías animadas.\nNúmero contacto: _________\nGracias."</string>
 </resources>
