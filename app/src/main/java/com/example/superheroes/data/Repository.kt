@@ -57,13 +57,5 @@ fun SuperheroDetail.convertDetailToEntity(): SuperheroDetailEntity = SuperheroDe
     this.traduccion
 )
 
-fun Superhero.convertToEntity(): SuperheroEntity =
-    SuperheroEntity(
-        this.id,
-        this.nombre,
-        this.origen,
-        this.imagen,
-        this.poder,
-        this.aniocreacion
-    )
+
 
