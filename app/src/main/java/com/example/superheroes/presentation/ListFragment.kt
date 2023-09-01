@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import com.example.superheroes.R
 import com.example.superheroes.databinding.FragmentListBinding
 
 
@@ -51,7 +50,7 @@ class ListFragment : Fragment() {
     private fun initAdapter() {
         val adapter = Adapter()
         binding.recyclerView.adapter = adapter
-        superheroVM.superheroeLiveData().observe(viewLifecycleOwner){
+        superheroVM.superheroLiveData().observe(viewLifecycleOwner){
             adapter.setData(it)
         }
     }

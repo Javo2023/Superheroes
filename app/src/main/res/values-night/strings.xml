@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="elige_tu_superh_roe_favorito">Elige tu Superhéroe Favorito</string>
+    <string name="cuenta_con_traducci_n_al_espa_ol">Cuenta con traducción al español.</string>
+    <string name="sin_traducci_n">Sin traducción.</string>
 </resources>
