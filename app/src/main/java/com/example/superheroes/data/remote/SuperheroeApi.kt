@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface SuperheroeApi {
     @GET("superheroes/")
-    suspend fun getData(): Response<List<Superheroe>>
+    suspend fun obtenerDatos(): Response<List<Superheroe>>
 
 }
