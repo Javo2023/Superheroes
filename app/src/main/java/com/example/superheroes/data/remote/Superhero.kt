@@ -8,5 +8,5 @@ data class Superhero(
     val origen: String,
     @SerializedName ("imagenLink") val imagen: String,
     val poder: String,
-    @SerializedName("año_creación") val aniocreacion : Long
+    @SerializedName("Año_creacion") val aniocreacion : Int
 )

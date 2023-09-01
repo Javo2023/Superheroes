@@ -6,12 +6,12 @@ import com.google.gson.annotations.SerializedName
 
 @Entity(tableName="tabla_detalle_superheroes")
 data class SuperheroDetailEntity(
-    @PrimaryKey val id:Long,
+    @PrimaryKey val id:Int,
     val nombre: String,
     val origen: String,
     @SerializedName("imagenLink") val imagen: String,
     val poder : String,
-    @SerializedName("Año_creacion") val aniocreacion:Long,
+    @SerializedName("año_creacion") val aniocreacion:Int,
     val color: String,
     val traduccion: Boolean
 
