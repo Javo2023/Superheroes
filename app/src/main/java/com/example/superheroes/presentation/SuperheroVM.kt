@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 class SuperheroVM (application: Application):AndroidViewModel(application){
     private val repository : Repository
 
-    fun superheroeLiveData()=repository.obtenerSuperheroesEntity()
+    fun superheroeLiveData()=repository.getSuperheroesEntity()
 
 
     init{
@@ -20,7 +20,7 @@ class SuperheroVM (application: Application):AndroidViewModel(application){
         repository=Repository(api,superheroDatabase)
     }
     fun obtenerSuperheroes() = viewModelScope.launch{
-        repository.cargarSuperheroes()
+        repository.loadSuperheroes()
     }
 
 
