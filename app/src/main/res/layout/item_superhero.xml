@@ -3,11 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="413dp"
-        android:layout_height="463dp">
+        android:layout_width="0dp"
+        android:layout_height="365dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -18,40 +21,48 @@
                 android:layout_width="204dp"
                 android:layout_height="29dp"
                 android:text="TextView"
-                tools:layout_editor_absoluteX="101dp"
-                tools:layout_editor_absoluteY="403dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvPower"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvPower"
+                app:layout_constraintTop_toBottomOf="@+id/tvPower"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="204dp"
                 android:layout_height="29dp"
                 android:text="TextView"
-                tools:layout_editor_absoluteX="101dp"
-                tools:layout_editor_absoluteY="255dp" />
+                app:layout_constraintStart_toStartOf="@+id/tvid"
+                app:layout_constraintTop_toBottomOf="@+id/tvid" />
 
             <TextView
                 android:id="@+id/tvOrigin"
                 android:layout_width="204dp"
                 android:layout_height="29dp"
                 android:text="TextView"
-                tools:layout_editor_absoluteX="101dp"
-                tools:layout_editor_absoluteY="305dp" />
+                app:layout_constraintEnd_toEndOf="@+id/tvName"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
             <TextView
                 android:id="@+id/tvPower"
                 android:layout_width="204dp"
                 android:layout_height="29dp"
                 android:text="TextView"
-                tools:layout_editor_absoluteX="101dp"
-                tools:layout_editor_absoluteY="356dp" />
+                app:layout_constraintEnd_toEndOf="@+id/tvOrigin"
+                app:layout_constraintStart_toStartOf="@+id/tvOrigin"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrigin" />
 
             <TextView
                 android:id="@+id/tvid"
                 android:layout_width="204dp"
                 android:layout_height="29dp"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
-                tools:layout_editor_absoluteX="101dp"
-                tools:layout_editor_absoluteY="208dp" />
+                app:layout_constraintEnd_toEndOf="@+id/image"
+                app:layout_constraintStart_toStartOf="@+id/image"
+                app:layout_constraintTop_toBottomOf="@+id/image" />
 
             <ImageView
                 android:id="@+id/image"
@@ -59,10 +70,10 @@
                 android:layout_height="172dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.474"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.076"
+                app:layout_constraintVertical_bias="0.054"
                 tools:srcCompat="@tools:sample/avatars" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

@@ -38,6 +38,11 @@ class Adapter : RecyclerView.Adapter<Adapter.ItemSuperheroViewHolder>(){
         fun bind(superhero:SuperheroEntity){
             bindinghero.image.load(superhero.imagen)
             bindinghero.tvName.text = superhero.nombre
+            bindinghero.tvid.text = superhero.id.toString()
+            bindinghero.tvOrigin.text = superhero.origen
+            bindinghero.tvcreacion.text = superhero.aniocreacion.toString()
+            bindinghero.tvPower.text = superhero.poder
+
 
             val bundle = Bundle()
             bundle.putString("id", superhero.id.toString())

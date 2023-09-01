@@ -43,6 +43,7 @@ class ListFragment : Fragment() {
 
         binding = FragmentListBinding.inflate(layoutInflater,container, false)
         initAdapter()
+        superheroVM.getAllSuperheroes()
         // Inflate the layout for this fragment
         return binding.root
     }

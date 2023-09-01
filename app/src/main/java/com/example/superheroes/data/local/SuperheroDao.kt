@@ -9,8 +9,8 @@ import androidx.room.Query
 @Dao
 interface SuperheroDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertSuperhero(SuperheroEntity: List<SuperheroEntity>)
+    suspend fun insertSuperhero(superheroEntity: List<SuperheroEntity>)
 
-    @Query("Select* from tabla_superheroes order by id asc")
+    @Query("Select * from tabla_superheroes order by id asc")
     fun getSuperheroes(): LiveData<List<SuperheroEntity>>
 }

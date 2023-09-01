@@ -19,7 +19,7 @@ class SuperheroVM (application: Application):AndroidViewModel(application){
         val superheroDatabase = SuperheroDatabase.getDataBase(application).getSuperheroesDao()
         repository=Repository(api,superheroDatabase)
     }
-    fun obtenerSuperheroes() = viewModelScope.launch{
+    fun getAllSuperheroes() = viewModelScope.launch{
         repository.loadSuperheroes()
     }
 
