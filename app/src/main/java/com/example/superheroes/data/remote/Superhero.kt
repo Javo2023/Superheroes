@@ -1,10 +1,12 @@
 package com.example.superheroes.data.remote
 
-data class Superheroe(
+import com.google.gson.annotations.SerializedName
+
+data class Superhero(
     val id: Long,
     val nombre: String,
     val origen: String,
     val imagenLink: String,
     val poder: String,
-    val año_creación: Long
+    @SerializedName("año_creación") val aniocreacion : Long
 )

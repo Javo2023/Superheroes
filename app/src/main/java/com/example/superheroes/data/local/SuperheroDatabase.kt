@@ -5,16 +5,16 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [SuperheroeEntity::class],version = 1)
-abstract class SuperheroeDatabase: RoomDatabase() {
+@Database(entities = [SuperheroEntity::class],version = 1)
+abstract class SuperheroDatabase: RoomDatabase() {
 
-    abstract fun obtenerSuperheroesDao(): SuperheroeDao
+    abstract fun getSuperheroesDao(): SuperheroDao
 
     companion object {
         @Volatile
-        private var INSTANCE: SuperheroeDatabase? = null
+        private var INSTANCE: SuperheroDatabase? = null
 
-        fun obtenerDataBase(context: Context): SuperheroeDatabase {
+        fun getDataBase(context: Context): SuperheroDatabase {
             val tempInstance = INSTANCE
             if (tempInstance != null) {
                 return tempInstance
@@ -22,7 +22,7 @@ abstract class SuperheroeDatabase: RoomDatabase() {
             synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    SuperheroeDatabase::class.java,
+                    SuperheroDatabase::class.java,
                     "razas_database"
                 ).build()
 

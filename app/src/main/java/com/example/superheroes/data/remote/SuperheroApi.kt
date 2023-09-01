@@ -3,8 +3,8 @@ package com.example.superheroes.data.remote
 import retrofit2.Response
 import retrofit2.http.GET
 
-interface SuperheroeApi {
+interface SuperheroApi {
     @GET("superheroes/")
-    suspend fun obtenerDatos(): Response<List<Superheroe>>
+    suspend fun getData(): Response<List<Superhero>>
 
 }
