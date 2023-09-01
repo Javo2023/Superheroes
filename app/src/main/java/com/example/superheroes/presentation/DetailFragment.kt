@@ -72,9 +72,9 @@ class DetailFragment : Fragment() {
                 binding.color.text = it.color
 
                 if (it.traduccion) {
-                    binding.traduccion.text = getString(R.string.cuenta_con_traducci_n_al_espa_ol)
+                    binding.traduccion.text = getString(R.string.translate)
                 } else {
-                    binding.traduccion.text = getString(R.string.sin_traducci_n)
+                    binding.traduccion.text = getString(R.string.no_translate)
                 }
 
                 }

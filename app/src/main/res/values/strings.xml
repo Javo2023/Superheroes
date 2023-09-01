@@ -2,9 +2,9 @@
     <string name="app_name">Superheroes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="elige_tu_superh_roe_favorito">Elige tu Superhéroe Favorito</string>
-    <string name="cuenta_con_traducci_n_al_espa_ol">Cuenta con traducción al español.</string>
-    <string name="sin_traducci_n">Sin traducción.</string>
+    <string name="choice">Elige tu Superhéroe Favorito</string>
+    <string name="translate">Cuenta con traducción al español.</string>
+    <string name="no_translate">Sin traducción.</string>
     <string name="receiver">comicconchile@hotmail.com</string>
     <string name="subject"> "Votacion  %s"</string>
 
