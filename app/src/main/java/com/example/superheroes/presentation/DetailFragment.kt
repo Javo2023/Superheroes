@@ -1,5 +1,7 @@
 package com.example.superheroes.presentation
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +16,7 @@ import com.example.superheroes.databinding.FragmentDetailBinding
 private const val ARG_PARAM1 = "id"
 
 
+
 class DetailFragment : Fragment() {
 
     lateinit var binding: FragmentDetailBinding
@@ -23,14 +26,18 @@ class DetailFragment : Fragment() {
     private var param1: String? = null
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
 
+
         }
 
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,7 +45,16 @@ class DetailFragment : Fragment() {
     ): View? {
         binding = FragmentDetailBinding.inflate(layoutInflater,container,false)
         superheroVM.getDetailSuperheroVM(param1.toString())
+
         getDetailSuperhero()
+
+        binding.btnCorreo.setOnClickListener (View.OnClickListener {
+             var nombre="superman"
+
+            sendEmail(nombre)
+        }
+
+        )
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -63,6 +79,23 @@ class DetailFragment : Fragment() {
                 }
             }
     }
+    private fun sendEmail(nombre: String) {
+        val receiver = "comicconchile@hotmail.com"
+        val intent = Intent(Intent.ACTION_SEND,Uri.parse(receiver))
+        intent.type = "plain/text"
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Votacion  $nombre")
+        intent.putExtra(Intent.EXTRA_TEXT, "Hola\n" +
+                "Quiero que el siguiente super héroes $nombre aparezca, en la nueva edición de\n" +
+                "biografías animadas.\n" +
+                "Número contacto: _________\n" +
+                "Gracias."
+        )
+        startActivity(Intent.createChooser(intent,"Votación"))
+
+
+
+    }
+
 
 
 }
